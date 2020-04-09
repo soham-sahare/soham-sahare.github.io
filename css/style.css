@@ -183,3 +183,12 @@ nav ul li a:hover{
     height: 1px;
     width: 100%;
 }
+
+@media screen and (max-width: 750px){
+
+    .container{
+        width: 700px;
+        height: 500px;
+    }
+
+}
