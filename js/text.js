@@ -1,1 +1,3 @@
-console.log("Hello World")
+$(window).on("load", function(){
+    $(".loader-wrapper").fadeOut("slow");
+})

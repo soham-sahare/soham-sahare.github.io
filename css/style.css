@@ -1,3 +1,5 @@
+/**************** BASIC ***************/
+
 *{
     padding: 0;
     margin: 0;
@@ -7,41 +9,86 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.top{
-    position: fixed;
-    background-color: #262626;
-    top: 0;
-    left: 0;
-    height: 20px;
+/**************** LOADER ***************/
+
+.loader-wrapper{
     width: 100%;
-}
-
-.left{
-    position: fixed;
-    background-color: #262626;
+    height: 100%;
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 20px;
+    background-color: #1b1b1b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.right{
-    position: fixed;
-    background-color: #262626;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 20px;
+.loader{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
 }
 
-.bottom{
-    position: fixed;
-    background-color: #262626;
-    bottom: 0;
-    left: 0;
-    height: 20px;
+.loader-inner{
+    vertical-align: top;
+    display: inline-block;
     width: 100%;
+    background-color: #c32865;
+    animation: loader-inner 2s infinite ease-in;
 }
+
+@keyframes loader{
+
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(180deg);
+    }
+    
+    50%{
+        transform: rotate(180deg);
+    }
+    
+    75%{
+        transform: rotate(360deg);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes loader-inner{
+
+    0%{
+        height: 0%;
+    }
+    
+    25%{
+        height: 0%;
+    }
+    
+    50%{
+        height: 100%;
+    }
+    
+    75%{
+        height: 100%;
+    }
+    
+    100%{
+        height: 0%;
+    }
+
+}
+
+/**************** HEADER ***************/
 
 .container{
     padding-top: 25px;
@@ -52,28 +99,24 @@
     align-items: center;
 }
 
-.outer{
-    height: 100vh;
-    width: 100%;
-}
+/**************** NAV BAR ***************/
 
 nav{
-    /*visibility: visible;*/
     width: 100%;
     display: flex;
     position: relative;
-    padding-top: 10PX;
+    padding-top: 10px;
 }
 
 nav ul{
-    height: 98vh;
+    height: 5vh;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
 nav ul li a{
-    color: white;
+    color: #ffffff;
     font-size: 20px;
     transition: ease 0.5s;
     justify-content: space-between;
@@ -82,6 +125,82 @@ nav ul li a{
 nav ul li a:hover{
     color: #c32865;
 }
+
+.active{
+    color: #c32865;
+}
+
+/**************** MAIN BODY ***************/
+
+.main{
+    padding: 60px;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.main h1{
+    font-size: 35px;
+    padding: 20px;
+}
+
+.main p{
+    font-size: 20px;
+    padding-bottom: 20px;
+    word-spacing: 2px;
+    letter-spacing: 1.5px;
+}
+
+.main h1 span{
+    color: #c32865;
+    font-size: 40px;
+}
+
+img{
+    height: 250px;
+    width: 250px;
+    border: 2px solid #c32865;
+    border-radius: 600px;
+}
+
+/**************** BUTTON ***************/
+
+.button {
+	background-color: transparent;
+	box-shadow: inset 0 0 6px 2px #c32865;
+	color: white;
+	border-radius: 30px;
+	cursor: pointer;
+	font-size: 0.75em;
+	height: 3.75em;
+	line-height: 3.85em;
+	letter-spacing: 2px;
+	padding: 0 4em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.button:hover{
+    box-shadow: 0 0 6px 2px #ffffff;
+}
+
+/**************** HR STYLING ***************/
+
+hr{
+    background-color: transparent;
+    border-bottom: 2px solid #c32865;
+    box-shadow: 15px 5px 10px ;
+    height: 1px;
+    width: 99%;
+}
+
+/**************** FOOTER ***************/
 
 .foot{
     padding: 20px 0 20px 0;
@@ -107,7 +226,7 @@ nav ul li a:hover{
 }
 
 .socials ul li a{
-    color: white;
+    color: #ffffff;
     font-size: 20px;
     transition: ease 0.5s;
 }
@@ -117,59 +236,109 @@ nav ul li a:hover{
 }
 
 .copyright{
-    color: white;
+    color: #ffffff;
     padding-top: 10px;
     padding-bottom: 10PX;
 }
 
 .copyright a{
-    color: white;
+    color: #c32865;
     font-style: italic;
-    transition: ease 0.5s;
+    transition: ease 0.4s;
 }
 
 .copyright a:hover{
-    color: #c32865;
+    color: #ffffff;
+    font-size: 120%;
 }
 
-hr{
-    background-color: transparent;
-    border-bottom: 2px solid #c32865;
-    box-shadow: 15px 5px 10px ;
-    height: 1px;
-    width: 99%;
-}
+/**************** FIXED BORDERS ***************/
 
-.active{
-    color: #c32865;
-}
-
-.main{
+.top{
+    position: fixed;
+    background-color: #262626;
     top: 0;
     left: 0;
-    color: white;
-    height: 100vh;
+    height: 20px;
     width: 100%;
-    display: flex;
 }
 
-@media screen and (min-width: 40px){
+.right{
+    position: fixed;
+    background-color: #262626;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 20px;
+}
 
-    .outer{
-        width: 60%;
+.bottom{
+    position: fixed;
+    background-color: #262626;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+}
+
+.left{
+    position: fixed;
+    background-color: #262626;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20px;
+}
+
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #fff
+	url('http://garudapr.in/wp-content/uploads/2017/12/loader.gif')
+	 no-repeat center center;	
+	z-index: 99999;
+}
+
+/**************** RESPONSIVE ***************/
+
+@media screen and (min-width: 1024px){
+
+    nav ul{
+        justify-content: center;
     }
 
-}
+    nav ul li a{
+        padding: 0 20px;
+    }
 
-@media screen and (max-width: 768px){
-
-    .outer{
-        width: 100%;
+    .main{
+        width: 50%;
     }
 
 }
 
 @media screen and (max-width: 500px){
-    
+
+    img{
+        height: 200px;
+        width: 200px;
+    }
+
+    .main h1{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .main h1 span{
+        font-size: 34px;
+    }
+
+    .main p{
+        padding: 10px;
+        font-size: 17px;
+        line-height: 25px;
+        padding-bottom: 20px;
+    }
 
 }
