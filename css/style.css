@@ -140,8 +140,9 @@ nav ul li a:hover{
 /**************** MAIN BODY ***************/
 
 .main{
-    padding: 100px;
-    width: 68%;
+    padding: 19px;
+    padding-top: 90px;
+    width: 90%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -737,6 +738,5 @@ hr{
         height: 100%;
         width: 80%;
     }
-
     
 }
