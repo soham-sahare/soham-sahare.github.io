@@ -9,6 +9,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
+h1{
+    transform: translateX(100rem);
+	animation: slidein .5s forwards;
+}
+
 /**************** LOADER ***************/
 
 .loader-wrapper{
@@ -92,6 +97,7 @@
 
 .container{
     padding-top: 25px;
+    position: relative;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -308,14 +314,65 @@ hr{
 	z-index: 99999;
 }
 
-/**************** SKILLS ***************/
+/**************** ABOUT ***************/
 
-.skills{
-    margin-top: 30px;
+.about{
+    padding: 10px;
+    padding-top: 20px;
     width: 90%;
     height: 100%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
     color: white;
+}
+
+.about h1{
+    font-size: 40px;
+    padding: 20px;
+}
+
+.about p{
+    text-align: left;
+    font-size: 20px;
+    padding: 20px;
+    line-height: 30px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+.about a{
+    color: white;
+    text-decoration: underline #c32865;
+}
+
+/**************** RESUME ***************/
+
+.resume{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/**************** SKILLS ***************/
+
+h1{
+    color: white;
+    font-size: 40px;
+    padding: 40px;
+}
+
+.skills{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
 }
 
 .skills h2{ 
@@ -327,18 +384,18 @@ hr{
 }
 
 .prolang{
-    height: 10vh;
-    padding: 20px;
-    width: 40%;
+    height: 90%;
+    padding: 10px;
+    width: 30%;
     padding-right: 200px;
     transform: translateX(-100rem);
     animation: slidein 1s forwards;
 }
 
 .rightside{
-    height: 90vh;
-    padding: 20px;
-    width: 40%;
+    height: 90%;
+    padding: 10px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     transform: translatex(100rem);
@@ -662,6 +719,17 @@ hr{
 
 }
 
+/**************** CONTACT ***************/
+
+.contact{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 /**************** RESPONSIVE ***************/
 
 @media screen and (min-width: 1024px){
@@ -739,7 +807,59 @@ hr{
         height: 100%;
         width: 80%;
     }
+
+    .resume{
+        height: 100vh;
+    }
+
+    .contact{
+        height: 100vh;
+    }
     
+}
+
+@media screen and (max-width: 1200px){
+
+    .main{
+        height: 100vh;
+    }
+
+    .about{
+        height: 100vh;
+    }
+
+    .skills{
+        height: 100%;
+    }
+
+}
+
+@media screen and (min-width: 1024px){
+
+    .main{
+        width: 50%;
+    }
+
+    .about{
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    
+    .about{
+        height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    .about p{
+        font-size: 18px;
+    }
+
 }
 
 /**************** HAMBURGER MENU ***************/
