@@ -48,7 +48,30 @@
 
         <div class="contact">
             <h1>CONTACT</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt expedita cumque sint explicabo consectetur repudiandae quidem eligendi quae aut, recusandae dignissimos illum architecto dicta? Praesentium iure illo doloremque aut sunt.</p>
+
+            <form action="contact.php" method="post">
+
+                <div class="field half first">
+                    <label for="name">Name</label>
+                    <input name="name" id="name" type="text" placeholder="Name" required>
+                </div>
+                
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" placeholder="Email" required>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="submit">
+                    <input value="Send Message" class="btn" type="submit">
+                </div>
+
+            </form>
+
         </div>
 
     </div>
